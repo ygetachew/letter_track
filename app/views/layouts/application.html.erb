@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Application </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%= stylesheet_link_tag"application", :media => "all" %>  
+  <%#= stylesheet_link_tag"themes/icon", :media => "all" %>  
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body class="easyui-layout">
+<div data-options="region:'north',split:false," style="height:80px;padding:5px;overflow:hidden;">
+<div style="clear:both;">
+  <div style="float:left"><%= image_tag "vtp_logo.png" %></div>
+  <h1 style="float:left">Vedtechpro Software</h1>
+  <div style="float:right;margin-right:0.5em;background:#bbcbbc;height:70px;width:20em;">Login|Settings,..</div>
+</div>
+</div>
+<div data-options="region:'south',split:false" style="height:30px;padding:10px;overflow:hidden;">  
+<small style="text-align:center">Copyright &copy; Vedtechpro Software Systems plc. </small>
+</div>
+<div data-options="region:'east',iconCls:'icon-reload',split:true" title="<%= 'Announcements' %>" style="width:200px;">
+
+</div>
+<div data-options="region:'west',split:true" title="Context Navigation" style="width:220px;padding1:1px;overflow:hidden;">
+<div class="easyui-accordion" data-options="fit:true,border:false">
+<div title="Incoming Letters" style="padding:10px;overflow:auto;">
+
+</div>
+<div title="Outgoing Letters" data-options="selected:true" style="padding:10px;">
+
+</div>
+<div title="Settings" style="padding:10px">
+
+</div>
+</div>
+</div>
+<div data-options="region:'center'" title="Main Title" style="overflow:hidden;">
+<div class="easyui-tabs" data-options="fit:true,border:false">
+<div title="Dashboard" style="padding:10px;overflow:scroll;"> 
+<div style="margin-top:1px;">
+<%= yield %>
+</div>
+</div>
+</div>
+</div>
+
+<div id="js_loads" style="display:none;">
+  <%= javascript_include_tag "application" %>  
+  <%= csrf_meta_tags %>
+</div>
+</body>
+</html>

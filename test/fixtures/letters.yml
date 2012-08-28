@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  to: MyString
+  reference_no: MyString
+  your_reference_no: MyString
+  issue_date: 2012-08-14
+  from: MyString
+
+two:
+  to: MyString
+  reference_no: MyString
+  your_reference_no: MyString
+  issue_date: 2012-08-14
+  from: MyString

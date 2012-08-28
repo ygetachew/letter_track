@@ -1,0 +1,39 @@
+<div style="background:#fafafa;padding:10px;width:300px;height:300px; -moz-border-radius:10px; -webkit-border-radius:10px;border-radius:10px;margin-left:8em;" >
+<%= form_for(@letter) do |f| %>
+  <% if @letter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@letter.errors.count, "error") %> prohibited this letter from being saved:</h2>
+
+      <ul>
+      <% @letter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :to %><br />
+      <%= f.text_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :reference_no %><br />
+    <%= f.text_field :reference_no %>
+  </div>
+  <div class="field">
+    <%= f.label :your_reference_no %><br />
+    <%= f.text_field :your_reference_no %>
+  </div>
+  <div class="field">
+    <%= f.label :issue_date %><br />
+    <%= f.date_select :issue_date %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

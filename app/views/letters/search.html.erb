@@ -1,0 +1,14 @@
+<h2>SearchBox</h2>
+  <div class="demo-info" style="margin-bottom:10px">
+    <div class="demo-tip icon-tip"></div>
+    <div>Click search button or press enter key in input box to do searching.</div>
+  </div>
+  
+  <input class="easyui-searchbox" data-options="prompt:'<%= I18n.t("enter_value") %> ',menu:'#mm',
+      searcher:function(value,name){alert(value+':'+name)}" style="width:300px"></input>
+      
+  <div id="mm" style="width:120px">
+    <% @categories.each do |category| %>
+      <div data-options="name:'<%= category %>',iconCls:'icon-ok'"> <%= category %></div>
+    <% end %>
+  </div>

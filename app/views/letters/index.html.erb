@@ -1,0 +1,30 @@
+<h1>Listing letters</h1>
+
+<table id="tt2">
+  <tr>
+    <th>To</th>
+    <th>Reference no</th>
+    <th>Your reference no</th>
+    <th>Issue date</th>
+    <th>From</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @letters.each do |letter| %>
+  <tr>
+    <td><%= letter.to %></td>
+    <td><%= letter.reference_no %></td>
+    <td><%= letter.your_reference_no %></td>
+    <td><%= letter.issue_date %></td>
+    <td><%= letter.from %></td>
+    <td><%= link_to 'Show', letter %></td>
+    <td><%= link_to 'Edit', edit_letter_path(letter) %></td>
+    <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' }, :class => "delete" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'New Letter', new_letter_path %>

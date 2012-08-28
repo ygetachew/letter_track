@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>To:</b>
+  <%= @letter.to %>
+</p>
+
+<p>
+  <b>Reference no:</b>
+  <%= @letter.reference_no %>
+</p>
+
+<p>
+  <b>Your reference no:</b>
+  <%= @letter.your_reference_no %>
+</p>
+
+<p>
+  <b>Issue date:</b>
+  <%= @letter.issue_date %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @letter.from %>
+</p>
+
+
+<%= link_to 'Edit', edit_letter_path(@letter) %> |
+<%= link_to 'Back', letters_path %>
